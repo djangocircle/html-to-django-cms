@@ -1,0 +1,8 @@
+{% load cms_tags menu_tags %}
+
+{% for child in children %}
+<li class="nav-item mx-0 mx-lg-1 {% if child.get_absolute_url ==  request.path%}check{% else %}un-check{% endif %}">
+    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">{{ child.get_menu_title }}</a>
+</li>
+
+{% endfor %}
